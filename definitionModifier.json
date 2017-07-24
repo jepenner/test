@@ -1,0 +1,7 @@
+{
+    "No Devices Detected": {
+      "value": "No Devices Detected",
+      "xpath": "//Label[@Caption='No Devices Detected']",
+      "type": "caption"
+    }
+}
