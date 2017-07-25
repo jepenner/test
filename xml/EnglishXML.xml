@@ -1,0 +1,4 @@
+<DefinitionModifier>
+	<SetAttribute XPath="//Label[@Caption='No Devices Detected']" NoDataCaption="No Devices Detected" />
+	<SetAttribute XPath="//ChartCanvas[@NoDataCaption='']" NoDataCaption="No Data Caption" />
+</DefinitionModifier>

@@ -1,7 +1,14 @@
 {
-    "No Devices Detected": {
-      "value": "No Devices Detected",
-      "xpath": "//Label[@Caption='No Devices Detected']",
-      "type": "caption"
-    }
+  "DefinitionModifier": {
+    "SetAttribute": [
+      {
+        "XPath": "//Label[@Caption='No Devices Detected']",
+        "NoDataCaption": "No Devices Detected"
+      },
+      {
+        "XPath": "//ChartCanvas[@NoDataCaption='']",
+        "NoDataCaption": "No Data Caption"
+      }
+    ]
+  }
 }
