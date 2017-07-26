@@ -8,6 +8,10 @@
       {
         "XPath": "//ChartCanvas[@NoDataCaption='']",
         "NoDataCaption": "No Data Caption"
+      },
+      {
+        "XPath": "//DataTableColumn[@Header='Rule ID']",
+        "Header": "Rule ID"
       }
     ]
   }
