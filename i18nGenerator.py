@@ -27,6 +27,10 @@ def findTranslations(def_mod, lang):
             else:
                 i18n[tr] = ""
 
+    for tr in list(i18n):
+        if tr not in tr_list:
+            del i18n[tr]
+
     return i18n
 
 def addTranslations(def_mod, lang):
