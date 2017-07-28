@@ -13,8 +13,10 @@ def generateTranslations(json):
     return result_list
 
 def findTranslations(def_mod, lang):
-    i18n_data = open('json/%s' % lang, 'r')
-    i18n = json.load(i18n_data)
+    i18n = dict()
+
+    with open('json/%s' % lang, 'r') as i18n_data:
+        i18n = json.load(i18n_data)
 
     tr_list = generateTranslations(def_mod)
 
@@ -29,10 +31,23 @@ def findTranslations(def_mod, lang):
 
 def addTranslations(def_mod, lang):
     add = findTranslations(def_mod, lang)
-    add = dict(sorted(add.items()))
+    
+    with open('json/%s' % lang, 'w') as i18n_data:
+        json.dump(add, i18n_data, indent=2)
 
-    i18n_data = open('json/%s' % lang, 'w')
-    json.dump(add, i18n_data, indent=2)
+def lang_check(lang_list):
+    existing = os.listdir("json")
+    empty = dict()
+
+    for l in lang_list:
+        if l not in existing:
+            with open('json/%s' % l, 'w+') as fp:
+                json.dump(empty, fp)
+            fp.close()
+
+    for l in existing:
+        if l not in lang_list:
+            os.remove("json/%s" % l)
 
 def getFiles():
     with open('definitionModifier.json') as data_file:
@@ -40,9 +55,12 @@ def getFiles():
         data = data['DefinitionModifier'.decode('utf-8')]
         data = data['SetAttribute'.decode('utf-8')]
 
-    lang_files = os.listdir("json")
+    with open('lang.txt', 'r') as lang_files:
+        lang_files = eval(lang_files.read())
+        lang_list = ["%s.json" % s for s in lang_files]
+        lang_check(lang_list)
 
-    for l in lang_files:
-        addTranslations(data, l)
+        for l in lang_list:
+            addTranslations(data, l)
 
 getFiles()

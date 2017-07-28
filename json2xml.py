@@ -1,4 +1,5 @@
 import json
+import os
 
 def json2xml(json_obj, lang, line_padding=""):
     result_list = list()
@@ -24,18 +25,39 @@ def json2xml(json_obj, lang, line_padding=""):
 
     return "\n".join(result_list)
 
+def lang_check():
+    existing_json = [elem[:2] for elem in os.listdir("json")]
+    existing_xml = [elem[:-4] for elem in os.listdir("xml")]
+    lang_list = list()
+
+    with open('lang.txt', 'r') as lang_data:
+        lang_list = eval(lang_data.read())
+
+        for l in list(lang_list):
+            if l not in existing_json:
+                del lang_list[l]
+                
+        for l in existing_xml:
+            if l not in lang_list:
+                os.remove("xml/%s.xml" % l)
+
+    return lang_list
+
 def getFiles():
+    data = dict()
+    i18n = dict()
+
     with open('definitionModifier.json') as data_file:
         data = json.load(data_file)
 
-    lang_list = { 'en': 'EnglishXML', 'fr': 'FrenchXML' }
+    lang_list = lang_check()
 
     for lang in lang_list:
-        i18n_data = open('json/%s.json' % lang, 'r')
-        i18n = json.load(i18n_data)
+        with open('json/%s.json' % lang, 'r') as i18n_data:
+            i18n = json.load(i18n_data)
 
-        lang_file = open('xml/%s.xml' % lang_list[lang], 'w')
-        lang_file.write(str(json2xml(data, i18n)))
-        lang_file.close()
+        with open('xml/%s.xml' % lang_list[lang], 'w') as lang_file:
+            lang_file.write(str(json2xml(data, i18n)))
+            lang_file.close()
 
 getFiles()

@@ -1,0 +1,158 @@
+<DefinitionModifier>
+	<SetAttribute XPath="//ChartCanvas[@NoDataCaption='']" NoDataCaption="No Data Found" />
+	<SetAttribute XPath="//ChartCanvas[@NoDataCaption='There are no Trend Log samples for the selected period.']" NoDataCaption="There are no Trend Log samples for the selected period." />
+	<SetAttribute XPath="//DataTableColumn[@Header='Rule ID']" Header="Rule ID" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Rule Name']" Header="Rule Name" />
+	<SetAttribute XPath="//DataTableColumn[@Header='# Occurrence']" Header="# Occurrence" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Object Reference']" Header="Object Reference" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Object Name']" Header="Object Name" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Object Type']" Header="Object Type" />
+	<SetAttribute XPath="//DataTableColumn[@Header='First Occurrence']" Header="First Occurrence" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Last Occurrence']" Header="Last Occurrence" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Occurred']" Header="Occurred" />
+	<SetAttribute XPath="//Label[@ID='lbl_kpi_exe_MeetTarget']" Caption="of systems meet target of &#60;b&#62;@Local.target~&#60;/b&#62; and &#60;b&#62;@Local.target_expression~&#60;/b&#62;" />
+	<SetAttribute XPath="//Label[@ID='lbl_kpi_exe_FailTarget']" Caption="&#60;b&#62;@Local.not_meeting_target~ systems&#60;/b&#62; failing" />
+	<SetAttribute XPath="//Label[@ID='lbl_kpi_exe_WellTarget']" Caption="&#60;b&#62;@Local.not_meeting_target~ systems&#60;/b&#62; performing well" />
+	<SetAttribute XPath="//Label[@ID='lbl_kpi_exe_NoDataSys1']" Caption="* &#60;i&#62;@Local.num_no_data_systems~ systems do not have a KPI score for the reporting period. This may be due to missing input data or the systems have been excluded from the report based on a filter for occupancy or the system is not running.&#60;/i&#62;" />
+	<SetAttribute XPath="//Label[@ID='lbl_kpi_exe_NoDataSys2']" Caption="* &#60;i&#62;@Local.num_no_data_systems~ system does not have a KPI score for the reporting period. This may be due to missing input data or the systems have been excluded from the report based on a filter for occupancy or the system is not running.&#60;/i&#62;" />
+	<SetAttribute XPath="//Label[@ID='lbl_kpi_exe_NoRuleSys1']" Caption="* &#60;i&#62;@Local.no_rule_systems~ systems are not running the selected rule and therefore not included in this report's calculations.&#60;/i&#62;" />
+	<SetAttribute XPath="//Label[@ID='lbl_kpi_exe_NoRuleSys2']" Caption="* &#60;i&#62;@Local.no_rule_systems~ system is not running the selected rule and therefore not included in this report's calculations.&#60;/i&#62" />
+	<SetAttribute XPath="//ChartCanvas[@ChartCaption='Performance Distribution for @Local.reporting_period~']" ChartCaption="Performance Distribution for @Local.reporting_period~" />
+	<SetAttribute XPath="//ChartCanvas[@NoDataCaption='No Trend Log Data Found For @Local.header_date~']" NoDataCaption="No Trend Log Data Found For @Local.header_date~" />
+	<SetAttribute XPath="//ChartCanvas[@ChartCaption='Systems meeting target over time']" ChartCaption="Systems meeting target over time" />
+	<SetAttribute XPath="//ChartCanvas[@NoDataCaption='No Trend Log Data Found']" NoDataCaption="No Trend Log Data Found" />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Systems meeting target: @Chart.passing~']" Caption="Systems meeting target: @Chart.passing~" />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Systems not meeting target: @Chart.failing~']" Caption="Systems not meeting target: @Chart.failing~" />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Systems with no data: @Chart.no_data~']" Caption="Systems with no data: @Chart.no_data~" />
+	<SetAttribute XPath="//Label[@Caption='Service To:']" Caption="Service To:" />
+	<SetAttribute XPath="//Label[@Caption='Billing Summary:']" Caption="Billing Summary:" />
+	<SetAttribute XPath="//Label[@Caption='Caution:']" Caption="Caution:" />
+	<SetAttribute XPath="//Label[@Caption='Meter has reset within the Billing Period']" Caption="Meter has reset within the Billing Period" />
+	<SetAttribute XPath="//Label[@ID='lblInterval']" Caption="=IIF('@Local.statInterval~' == '', 'Days', '@Local.statInterval~' ) " />
+	<SetAttribute XPath="//Label[@Caption=' in Billing Cycle: ']" Caption=" in Billing Cycle: " />
+	<SetAttribute XPath="//Label[@Caption='Meter Start:']" Caption="Meter Start:" />
+	<SetAttribute XPath="//Label[@Caption='Meter End:']" Caption="Meter End:" />
+	<SetAttribute XPath="//Label[@Caption='No Data Found']" Caption="No Data Found" />
+	<SetAttribute XPath="//Label[@Caption='Total Consumption: ']" Caption="Total Consumption: " />
+	<SetAttribute XPath="//Label[@Caption='Average Energy Rate: ']" Caption="Average Energy Rate: " />
+	<SetAttribute XPath="//Label[@Caption=' per ']" Caption=" per " />
+	<SetAttribute XPath="//Label[@Caption='Cost over Period: ']" Caption="Cost over Period: " />
+	<SetAttribute XPath="//DataTableColumn[@Header='Timestamp']" Header="Timestamp" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Average Energy Rate [@Request.units2~ per @Request.units~]']" Header="Average Energy Rate [@Request.units2~ per @Request.units~]" />
+	<SetAttribute XPath="//SummaryRow[@Caption='Total']" Caption="Total" />
+	<SetAttribute XPath="//Label[@Caption='No Series Type to Display']" Caption="No Series Type to Display" />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Name:']" Caption="Name:" />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Value:']" Caption="Value:" />
+	<SetAttribute XPath="//Label[@Caption='Average Energy Rate:']" Caption="Average Energy Rate:" />
+	<SetAttribute XPath="//Label[@Caption='  per @Request.primaryYUnits~']" Caption="  per @Request.primaryYUnits~" />
+	<SetAttribute XPath="//Label[@Caption='Total Cost:']" Caption="Total Cost:" />
+	<SetAttribute XPath="//Label[@Caption='Highest Cost:']" Caption="Highest Cost:" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Name']" Header="Name" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Meter Start']" Header="Meter Start" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Meter End']" Header="Meter End" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Meter Consumption [@Request.primaryYUnits~]']" Header="Meter Consumption [@Request.primaryYUnits~]" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Cost [@Request.series1_title~]']" Header="Cost [@Request.series1_title~]" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Percentage']" Header="Percentage" />
+	<SetAttribute XPath="//Label[@Caption='Total:']" Caption="Total:" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Value']" Header="Value" />
+	<SetAttribute XPath="//DataTableColumn[@Header='System']" Header="System" />
+	<SetAttribute XPath="//Label[@Caption='There is no equipment in hand based on the object types provided in the Chart Options tab.']" Caption="There is no equipment in hand based on the object types provided in the Chart Options tab." />
+	<SetAttribute XPath="//DataTableColumn[@Header='Device']" Header="Device" />
+	<SetAttribute XPath="//Label[@Caption='No Devices Detected']" Caption="No Devices Detected" />
+	<SetAttribute XPath="//Label[@Caption='No Objects Detected in Building']" Caption="No Objects Detected in Building" />
+	<SetAttribute XPath="//Label[@Caption='No Systems Detected']" Caption="No Systems Detected" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Last Occurred']" Header="Last Occurred" />
+	<SetAttribute XPath="//Label[@Caption='No schedule changes have been detected for the selected period based on your Golden Standard configuration for the Schedule object.']" Caption="No schedule changes have been detected for the selected period based on your Golden Standard configuration for the Schedule object." />
+	<SetAttribute XPath="//Label[@ID='lbl_spim_count_message']" Caption="&#60;span style='background-color:Yellow;'&#62;Limiting the results to the first &#60;strong&#62;@Local.row_count~&#60;/strong&#62; records which were found in the specified reporting period.&#60;/span&#62;" />
+	<SetAttribute XPath="//Label[@Caption='No Setpoints in Manual have been detected for the selected period based on the query for the setpoint provided in the Chart Options tab.']" Caption="No Setpoints in Manual have been detected for the selected period based on the query for the setpoint provided in the Chart Options tab." />
+	<SetAttribute XPath="//Label[@ID='lbl_fdd_count_message']" Caption="&#60;span style='background-color:Yellow;'&#62;Displaying the first &#60;strong&#62;@Local.row_count~&#60;/strong&#62; insights which were found in the specified reporting period.&#60;/span&#62;" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Message']" Header="Message" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Priority Level']" Header="Priority Level" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Insights Triggered']" Header="Insights Triggered" />
+	<SetAttribute XPath="//DataTableColumn[@Header='First Occurrence']" Header="First Occurrence" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Last Occurrence']" Header="Last Occurrence" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Insight State']" Header="Insight State" />
+	<SetAttribute XPath="//Label[@Caption='No Insights have been created for the selected period.']" Caption="No Insights have been created for the selected period." />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Timestamp:']" Caption="Timestamp:" />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Timestamp: ']" Caption="Timestamp: " />
+	<SetAttribute XPath="//Label[@Caption='No Series Type to Display']" Caption="No Series Type to Display" />
+	<SetAttribute XPath="//Label[@Caption='Table Summary']" Caption="Table Summary" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Total [@Request.primaryYUnits~]']" Header="Total [@Request.primaryYUnits~]" />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Total:']" Caption="Total:" />
+	<SetAttribute XPath="//Rows[@Caption='Statistics:']" Caption="Statistics:" />
+	<SetAttribute XPath="//Label[@Caption='Key Performance Indicator (KPI) is calculated hourly and averaged over the specified date range.']" Caption="Key Performance Indicator (KPI) is calculated hourly and averaged over the specified date range." />
+	<SetAttribute XPath="//Label[@Caption='Performance Index']" Caption="Performance Index" />
+	<SetAttribute XPath="//Label[@Caption='Percentage of systems working below the KPI Target']" Caption="Percentage of systems working below the KPI Target" />
+	<SetAttribute XPath="//Label[@Caption='KPI Target:']" Caption="KPI Target:" />
+	<SetAttribute XPath="//Label[@Caption='Less Than:']" Caption="Less Than:" />
+	<SetAttribute XPath="//Label[@Caption='Performance Goal:']" Caption="Performance Goal:" />
+	<SetAttribute XPath="//Label[@Caption='@Request.performanceTarget~% of systems meet the KPI Target']" Caption="@Request.performanceTarget~% of systems meet the KPI Target" />
+	<SetAttribute XPath="//Label[@Caption='Total Number of Systems:']" Caption="Total Number of Systems:" />
+	<SetAttribute XPath="//Label[@Caption='System(s) below KPI Target:']" Caption="System(s) below KPI Target:" />
+	<SetAttribute XPath="//Label[@Caption='System(s) above KPI Target:']" Caption="System(s) above KPI Target:" />
+	<SetAttribute XPath="//Label[@Caption='Lowest KPI:']" Caption="Lowest KPI:" />
+	<SetAttribute XPath="//Label[@Caption='Highest KPI:']" Caption="Highest KPI:" />
+	<SetAttribute XPath="//Label[@Caption='Average KPI:']" Caption="Average KPI:" />
+	<SetAttribute XPath="//Label[@Caption='System(s) with the Highest KPI:']" Caption="System(s) with the Highest KPI:" />
+	<SetAttribute XPath="//Label[@Caption='List of system(s) with the highest KPI score(s):']" Caption="List of system(s) with the highest KPI score(s):" />
+	<SetAttribute XPath="//Chart[@ChartTitle='Worst Performing Systems']" Caption="Worst Performing Systems" />
+	<SetAttribute XPath="//Label[@Caption='No KPI scores have been generated. Some common things to check for: ']" Caption="No KPI scores have been generated. Some common things to check for: " />
+	<SetAttribute XPath="//Label[@Caption='1) Make sure that your working rules that generate the Calculated Trend Log values used in this chart function correctly.']" Caption="1) Make sure that your working rules that generate the Calculated Trend Log values used in this chart function correctly." />
+	<SetAttribute XPath="//Label[@Caption='2) Make sure that you are using the correct Calculated Trend Log reference which is found in the [Optionals] tab  for this chart.']" Caption="2) Make sure that you are using the correct Calculated Trend Log reference which is found in the [Optionals] tab  for this chart." />
+	<SetAttribute XPath="//Label[@Caption='System Tag Reference ']" Caption="System Tag Reference " />
+	<SetAttribute XPath="//Label[@Caption='- for more information on system setup and report implementation']" Caption="- for more information on system setup and report implementation" />
+	<SetAttribute XPath="//DataTableColumn[@Header='System Name']" Header="System Name" />
+	<SetAttribute XPath="//QuicktipRow[@Caption='Number of System(s): ']" Caption="Number of System(s): " />
+	<SetAttribute XPath="//Label[@ID='lbl_ins_digest_count_msg']" Caption="&#60;span style='background-color: Yellow;'&#62;Displaying the first &#60;strong&#62; @Local.row_count~ &#60; /strong &#62; insights which were found in the specified reporting period.&#60;/span&#62;" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Priority']" Header="Priority" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Description']" Header="Description" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Number of Insight Triggers']" Header="Number of Insight Triggers" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Date of Last Trigger']" Header="Date of Last Trigger" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Insight Type']" Header="Insight Type" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Insight ID']" Header="Insight ID" />
+	<SetAttribute XPath="//Label[@Caption='No Insights have been generated during the selected period.']" Caption="No Insights have been generated during the selected period." />
+	<SetAttribute XPath="//Label[@ID='lbl_ins_digest_sel_priority']" Caption="=IIF("@Data.priority~" == 1 , "Low" , IIF("@Data.priority~" == 2, "Medium", IIF("@Data.priority~" == 3, "High", "none")))" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Device ID']" Header="Device ID" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Device Name']" Header="Device Name" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Last Backup Date']" Header="Last Backup Date" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Days Old']" Header="Days Old" />
+	<SetAttribute XPath="//Label[@Caption='All available devices have a  backup within the last seven days.']" Caption="All available devices have a  backup within the last seven days." />
+	<SetAttribute XPath="//Rows[@Caption='Actions:']" Caption="Actions:" />
+	<SetAttribute XPath="//Label[@Caption='BACnet devices require a more recent backup.']" Caption="BACnet devices require a more recent backup." />
+	<SetAttribute XPath="//Rows[@Caption='Device Backup Statistics:']" Caption="Device Backup Statistics:" />
+	<SetAttribute XPath="//Label[@Caption='BACnet devices for this location (Total)']" Caption="BACnet devices for this location (Total)" />
+	<SetAttribute XPath="//Label[@Caption='BACnet devices have been backed up during this reporting period']" Caption="BACnet devices have been backed up during this reporting period" />
+	<SetAttribute XPath="//Label[@Caption='BACnet devices have not been backed up during this reporting period']" Caption="BACnet devices have not been backed up during this reporting period" />
+	<SetAttribute XPath="//DataTableColumn[@Header='Age']" Header="Age" />
+	<SetAttribute XPath="//Label[@Caption='All available devices have a backup within the last seven days.']" Caption="All available devices have a backup within the last seven days." />
+	<SetAttribute XPath="//DataTable[@Caption='Top 10 Device Backup Exceptions:']" Caption="Top 10 Device Backup Exceptions:" />
+	<SetAttribute XPath="//DataTable[@Caption='Top 10 Action List as of @Request.today~:']" Caption="Top 10 Action List as of @Request.today~:" />
+	<SetAttribute XPath="//Label[@Caption='There are no active Insights at the time this report was generated.']" Caption="There are no active Insights at the time this report was generated." />
+	<SetAttribute XPath="//Label[@Caption='@Local.total_insights~ active insights in total.']" Caption="@Local.total_insights~ active insights in total." />
+	<SetAttribute XPath="//ChartCanvas[@ChartCaption='Priority']" ChartCaption="Priority" />
+	<SetAttribute XPath="//Series[@LegendLabel='Low']" LegendLabel="Low" />
+	<SetAttribute XPath="//Series[@LegendLabel='Medium']" LegendLabel="Medium" />
+	<SetAttribute XPath="//Series[@LegendLabel='High']" LegendLabel="High" />
+	<SetAttribute XPath="//ChartCanvas[@ChartCaption='Type']" ChartCaption="Type" />
+	<SetAttribute XPath="//Series[@LegendLabel='Golden Standard']" LegendLabel="Golden Standard" />
+	<SetAttribute XPath="//Series[@LegendLabel='Infrastructure']" LegendLabel="Infrastructure" />
+	<SetAttribute XPath="//Series[@LegendLabel='Energy']" LegendLabel="Energy" />
+	<SetAttribute XPath="//Series[@LegendLabel='Energy KPI']" LegendLabel="Energy KPI" />
+	<SetAttribute XPath="//Series[@LegendLabel='Integrity KPI']" LegendLabel="Integrity KPI" />
+	<SetAttribute XPath="//Series[@LegendLabel='Fault Detection']" LegendLabel="Fault Detection" />
+	<SetAttribute XPath="//Label[@Caption='No insights generated within reporting period.']" Caption="No insights generated within reporting period." />
+	<SetAttribute XPath="//Label[@Caption='Percentage of systems working above the KPI Target']" Caption="Percentage of systems working above the KPI Target" />
+	<SetAttribute XPath="//Label[@Caption='Greater Than:']" Caption="Greater Than:" />
+	<SetAttribute XPath="//Label[@Caption='@Request.performanceTarget~% of Systems meet KPI Target']" Caption="@Request.performanceTarget~% of Systems meet KPI Target" />
+	<SetAttribute XPath="//Label[@Caption='System(s) with the Lowest KPI:']" Caption="System(s) with the Lowest KPI:" />
+	<SetAttribute XPath="//Label[@Caption='List of system(s) with the lowest KPI score(s):']" Caption="List of system(s) with the lowest KPI score(s):" />
+	<SetAttribute XPath="//Chart[@ChartTitle='Top @Request.numberOfScores~ KPI Scores']" ChartTitle="Top @Request.numberOfScores~ KPI Scores" />
+	<SetAttribute XPath="//Chart[@ChartTitle='Bottom @Request.numberOfScores~ KPI Scores']" ChartTitle="Bottom @Request.numberOfScores~ KPI Scores" />
+	<SetAttribute XPath="//DataTableColumn[@Header='System Score']" Header="System Score" />
+	<SetAttribute XPath="//Label[@Caption='No KPI scores found.']" Caption="No KPI scores found." />
+	<SetAttribute XPath="//DataTable[@Caption='Daily KPI Summary (Showing data for @Local.num_systems~ systems with scores of @Local.target~ and @Local.target_expression~)']" Caption="Daily KPI Summary (Showing data for @Local.num_systems~ systems with scores of @Local.target~ and @Local.target_expression~)" />
+	<SetAttribute XPath="//Label[@ID='lbl_spim_count_message']" Caption="&#60;span style='background-color:Yellow;'&#62;Limiting the results to the first &#60;strong&#62; @Local.row_count~ &#60; /strong &#62; records which were found in the specified reporting period.&#60;/span&#62;" />
+	<SetAttribute XPath="//Label[@Caption='Regression Function']" Caption="Regression Function" />
+	<SetAttribute XPath="//Label[@Caption='R-square Value']" Caption="R-square Value" />
+	<SetAttribute XPath="//Label[@Caption='&lt;span style=&quot;background-color:Yellow;&quot;&gt;@Local.message~&lt;/span&gt;']" Caption="&lt;span style=&quot;background-color:Yellow;&quot;&gt;@Local.message~&lt;/span&gt;" />
+</DefinitionModifier>
